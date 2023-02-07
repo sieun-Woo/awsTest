@@ -1,5 +1,6 @@
 package com.group.awstest;
 
+import com.group.awstest.test.Test;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -9,6 +10,11 @@ public class AwsTestApplication {
     //test
 
     public static void main(String[] args) {
-        SpringApplication.run(AwsTestApplication.class, args);
+        Test test = new Test();
+        try { test.writeExcel(); }
+        catch (Exception e) {
+            e.getMessage();
+        }
+//        SpringApplication.run(AwsTestApplication.class, args);
     }
 }
